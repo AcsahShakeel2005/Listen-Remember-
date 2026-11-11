@@ -1,0 +1,55 @@
+/* Original book-cover images for Listen & Remember */
+.lr-cover {
+  position: relative;
+  display: block;
+  padding: 0;
+  min-height: 130px;
+  isolation: isolate;
+  background: #e9e7ff;
+}
+.lr-cover::after { pointer-events: none; z-index: 2; }
+.lr-cover-fallback {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  font-size: 48px;
+  z-index: 0;
+}
+.lr-cover-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: 1;
+  border-radius: inherit;
+}
+.lr-player-cover {
+  position: relative;
+  overflow: hidden;
+  padding: 0;
+  isolation: isolate;
+}
+.lr-player-cover img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background: #f4f2ff;
+  z-index: 1;
+  border-radius: inherit;
+}
+.lr-player-cover-fallback {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  font-size: 72px;
+  z-index: 0;
+}
+@media (max-width: 680px) {
+  .lr-cover { min-height: 120px; }
+}
